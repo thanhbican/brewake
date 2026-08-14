@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo build --release --locked
+      - shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path dist/Brewake -Force
+          Copy-Item target/release/brewake.exe,target/release/brewakectl.exe,README.md,README.vi.md,CHANGELOG.md,LICENSE dist/Brewake
+          $archive = "dist/Brewake-${{ github.ref_name }}-windows-x64.zip"
+          Compress-Archive -Path dist/Brewake/* -DestinationPath $archive
+          $hash = (Get-FileHash -Algorithm SHA256 $archive).Hash.ToLowerInvariant()
+          "$hash  $(Split-Path $archive -Leaf)" | Set-Content -NoNewline "$archive.sha256"
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.zip
+            dist/*.sha256
+          generate_release_notes: true

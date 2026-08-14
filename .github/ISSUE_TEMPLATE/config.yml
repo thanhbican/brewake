@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/thanhbican/brewake/security/advisories/new
+    about: Please report security-sensitive issues privately.
+  - name: Support guide
+    url: https://github.com/thanhbican/brewake/blob/main/SUPPORT.md
+    about: Review troubleshooting steps before opening a bug report.

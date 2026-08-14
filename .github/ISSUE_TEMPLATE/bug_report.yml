@@ -1,0 +1,62 @@
+name: Bug report
+description: Report reproducible incorrect behavior in Brewake.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve Brewake. Do not disclose security vulnerabilities here; use private vulnerability reporting instead.
+  - type: input
+    id: version
+    attributes:
+      label: Brewake version
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Include edition, version, build, and architecture if known.
+      placeholder: Windows 11 24H2, build 26100, x64
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start Brewake...
+        2. Right-click...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status output
+      description: Paste `brewakectl status --json` output and remove personal data.
+      render: json
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I tested the latest release.
+          required: true
+        - label: I searched existing issues.
+          required: true
+        - label: This report does not contain secrets or a security vulnerability.
+          required: true

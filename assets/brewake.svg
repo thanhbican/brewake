@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Brewake logo</title>
+  <desc id="desc">An amber coffee mug with rising steam and a green awake indicator.</desc>
+  <rect width="512" height="512" rx="112" fill="#14110f"/>
+  <path d="M168 146c-30-38 32-58 3-94M258 146c-30-38 32-58 3-94" fill="none" stroke="#f5ead9" stroke-width="26" stroke-linecap="round"/>
+  <path d="M116 178h245v191c0 45-36 81-81 81h-83c-45 0-81-36-81-81V178Z" fill="#e6842c" stroke="#f5ead9" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M129 221h219" stroke="#6f3218" stroke-width="46"/>
+  <path d="M361 224h29c54 0 75 44 75 88s-30 80-86 80h-18" fill="none" stroke="#f5ead9" stroke-width="24"/>
+  <path d="M91 456h310" stroke="#f5ead9" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="407" cy="112" r="60" fill="#1c8b68" stroke="#f5ead9" stroke-width="18"/>
+  <path d="m379 112 20 20 39-43" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
